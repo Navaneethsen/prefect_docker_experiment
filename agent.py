@@ -11,7 +11,6 @@ try:
 except Exception:
     raise Exception
 
-
 def main():
     """Main Function"""
 
@@ -32,7 +31,7 @@ def main():
         name="Docker Test Agent",
         no_pull=True,
         volumes=[input_mount],
-        labels=["TestAgent", f"IP:{HOST_IP}"],
+        labels=["TestFlow", f"IP:{HOST_IP}"],
         show_flow_logs=True,
     )
     

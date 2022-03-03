@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  test_docker_agent:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    image: test_docker_agent:latest
+    container_name: "test_docker_agent"
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+    restart: always
