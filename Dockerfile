@@ -11,5 +11,5 @@ ENV PYTHONPATH="$PYTHONPATH:/app"
 # Changing Prefect Backend to Server
 RUN prefect backend server
 
-# Running the Translation Evaluator Prefect Agent
+# Running the Prefect Agent
 CMD python agent.py
